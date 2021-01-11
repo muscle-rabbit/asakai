@@ -13,14 +13,24 @@
             align-items: center;
         }
     </style>
+    <script>
+    history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+  history.go(1);
+});
+    </script>
 </head>
 <body>
     <div class="content">
         <div class="right-door">
-            <img src="img/black_door.png" alt="">
+            <a href="b.html">
+                <img src="img/black_door.png" alt="">
+            </a>
         </div>
         <div class="left-door">
-            <img src="img/white_door.png" alt="">
+            <a href="a.html">
+                <img src="img/white_door.png" alt="">
+            </a>
         </div>
     </div>
 </body>
