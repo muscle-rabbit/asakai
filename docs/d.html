@@ -13,12 +13,17 @@
             align-items: center;
         }
     </style>
-        <script>
-            history.pushState(null, null, location.href);
-        window.addEventListener('popstate', (e) => {
-          history.go(1);
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            // 自身のページを履歴に追加
+            history.pushState(null, null, null);
+            // ページ戻り時にも自身のページを履歴に追加
+            $(window).on("popstate", function(){
+                history.pushState(null, null, null);
+            });
         });
-            </script>
+        </script>
 </head>
 <body>
     <div class="content">
